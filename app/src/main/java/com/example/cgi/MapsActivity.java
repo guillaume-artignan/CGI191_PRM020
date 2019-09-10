@@ -1,13 +1,17 @@
 package com.example.cgi;
 
 import androidx.fragment.app.FragmentActivity;
+
+import android.graphics.Color;
 import android.os.Bundle;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -39,9 +43,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        // Add a marker in Sydney and move the camera*
+        //Latitude : 45.769966 | Longitude : 4.80622
+        LatLng lyon = new LatLng(45.769966, 4.80622);
+        mMap.addMarker(new MarkerOptions().position(lyon).title("Campus HEP Lyon"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(lyon));
+        mMap.moveCamera(CameraUpdateFactory.zoomTo(17.0f));
+        mMap.addCircle(new CircleOptions()
+                .center(lyon)
+                .strokeColor(Color.GREEN)
+                .strokeWidth(2)
+                .fillColor(Color.argb(50,125,255,125))
+                .radius(50));
+
     }
 }
