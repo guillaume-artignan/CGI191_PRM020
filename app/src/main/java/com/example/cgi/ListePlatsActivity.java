@@ -25,6 +25,14 @@ public class ListePlatsActivity extends AppCompatActivity {
         p2.setNom("Crevette à l'ananas");
         p3.setNom("Porc au légumes");
 
+        p1.setPrix(5.5);
+        p2.setPrix(12.0);
+        p3.setPrix(10.0);
+
+        p1.setImage("plat3");
+        p2.setImage("plat2");
+        p3.setImage("plat1");
+
         adapter.addAll(p1,p2,p3);
         ListView liste = findViewById(R.id.liste_plats);
         liste.setAdapter(adapter);
