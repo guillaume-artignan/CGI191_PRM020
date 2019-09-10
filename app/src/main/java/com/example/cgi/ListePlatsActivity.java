@@ -17,7 +17,15 @@ public class ListePlatsActivity extends AppCompatActivity {
         Log.i("\t \t \t ETAT", "CREATE");
 
         PlatAdapter adapter = new PlatAdapter(this);
-        adapter.addAll(new Plat(),new Plat(), new Plat());
+        Plat p1 = new Plat();
+        Plat p2 = new Plat();
+        Plat p3 = new Plat();
+
+        p1.setNom("Pannacotta au gingembre");
+        p2.setNom("Crevette à l'ananas");
+        p3.setNom("Porc au légumes");
+
+        adapter.addAll(p1,p2,p3);
         ListView liste = findViewById(R.id.liste_plats);
         liste.setAdapter(adapter);
     }
