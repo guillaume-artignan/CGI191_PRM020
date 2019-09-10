@@ -1,6 +1,8 @@
 package com.example.cgi.model;
 
-public class Plat {
+import java.io.Serializable;
+
+public class Plat implements Serializable {
     private String nom;
     private String description;
     private Double prix;
