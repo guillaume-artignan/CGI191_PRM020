@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CGI</string>
+    <string name="login">Identifiant</string>
+    <string name="password">Mot de passe</string>
+    <string name="connect">Se connecter</string>
+    <string name="message_connect">Le login ou le mot de passe sont faux</string>
+
+</resources>
