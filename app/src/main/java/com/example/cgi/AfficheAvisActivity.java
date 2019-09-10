@@ -1,6 +1,6 @@
 package com.example.cgi;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -8,8 +8,6 @@ import android.widget.TextView;
 
 import com.example.cgi.model.Avis;
 import com.example.cgi.task.DownloadAvisTask;
-
-import java.io.IOException;
 
 public class AfficheAvisActivity extends AppCompatActivity {
 
