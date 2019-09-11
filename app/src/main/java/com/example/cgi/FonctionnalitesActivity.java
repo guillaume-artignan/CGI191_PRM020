@@ -14,8 +14,30 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fonctionnalites);
     }
 
+
     public void ouvrirSon(View v){
         Intent i = new Intent(this,JouerSonActivity.class);
         startActivity(i);
     }
+
+  public void Flashlight(View v){
+        Intent i = new Intent(this,FlashLightActivity.class);
+        startActivity(i);
+    }
+
+    public void fonctionnalitePhoneCall(View v){
+        Intent i = new Intent(this,PhoneCallActivity.class);
+        startActivity(i);
+    }
+
+    public void sensorFonction(View v){
+        Intent i = new Intent(this,SensorActivity.class);
+        startActivity(i);
+    }
+
+    public void afficheBattery (View v){
+        Intent i = new Intent(this,BatteryActivity.class);
+        startActivity(i);
+    }
+
 }
