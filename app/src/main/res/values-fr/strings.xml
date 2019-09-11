@@ -6,5 +6,7 @@
     <string name="connect">Se connecter</string>
     <string name="message_connect">Le login ou le mot de passe sont faux</string>
     <string name="title_activity_sms">SMS</string>
+    <string name="appbar_scrolling_view_behavior">SMS</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

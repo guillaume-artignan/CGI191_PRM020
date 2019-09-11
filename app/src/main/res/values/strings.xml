@@ -7,5 +7,6 @@
     <string name="message_connect">Wrong login or password</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_sms">SMS</string>
+    <string name="appbar_scrolling_view_behavior">SMS</string>
 
 </resources>
