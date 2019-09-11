@@ -1,3 +1,4 @@
+
 <resources>
     <string name="app_name">CGI</string>
     <string name="login">Login</string>
@@ -5,5 +6,6 @@
     <string name="connect">Connect</string>
     <string name="message_connect">Wrong login or password</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_sms">SMS</string>
 
 </resources>
