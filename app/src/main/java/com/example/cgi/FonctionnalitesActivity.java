@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.telephony.SmsManager;
+>>>>>>> ElsaThomas
 import android.view.View;
 
 public class FonctionnalitesActivity extends AppCompatActivity {
@@ -14,6 +18,7 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fonctionnalites);
     }
 
+<<<<<<< HEAD
     public void positionActivity(View v){
         Intent i = new Intent(this, PositionActivity.class);
         startActivity(i);
@@ -49,4 +54,10 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+=======
+    public void SmsActivity (View v){
+        Intent i = new Intent(this,SmsActivity.class);
+        startActivity(i);
+       }
+>>>>>>> ElsaThomas
 }
