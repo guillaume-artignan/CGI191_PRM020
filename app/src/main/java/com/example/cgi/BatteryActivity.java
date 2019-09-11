@@ -53,7 +53,7 @@ public class BatteryActivity extends AppCompatActivity {
                 int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
                 int scale = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
                 float batteryPct = (level/(float) scale)*100;
-                textBatteryLevel.setText("Niveau de batterie : "+batteryPct+" %");
+                textBatteryLevel.setText("Niveau batterie : "+batteryPct+" %");
 
                 int voltage = intent.getIntExtra(BatteryManager.EXTRA_VOLTAGE, -1);
                 textBatteryVoltage.setText("Voltage : "+voltage+" mv");
@@ -67,19 +67,19 @@ public class BatteryActivity extends AppCompatActivity {
 
                 int health = intent.getIntExtra(BatteryManager.EXTRA_HEALTH, -1);
                 switch(health) {
-                    case BatteryManager.BATTERY_HEALTH_COLD:textBatteryHealth.setText("Santé de la batterie : froide");
+                    case BatteryManager.BATTERY_HEALTH_COLD:textBatteryHealth.setText("Santé batterie : froide");
                         break;
-                    case BatteryManager.BATTERY_HEALTH_DEAD:textBatteryHealth.setText("Santé de la batterie : morte");
+                    case BatteryManager.BATTERY_HEALTH_DEAD:textBatteryHealth.setText("Santé batterie : morte");
                         break;
-                    case BatteryManager.BATTERY_HEALTH_GOOD:textBatteryHealth.setText("Santé de la batterie : bonne");
+                    case BatteryManager.BATTERY_HEALTH_GOOD:textBatteryHealth.setText("Santé batterie : bonne");
                         break;
-                    case BatteryManager.BATTERY_HEALTH_OVERHEAT:textBatteryHealth.setText("Santé de la batterie : en surchauffe");
+                    case BatteryManager.BATTERY_HEALTH_OVERHEAT:textBatteryHealth.setText("Santé batterie : en surchauffe");
                         break;
-                    case BatteryManager.BATTERY_HEALTH_OVER_VOLTAGE:textBatteryHealth.setText("Santé de la batterie : hors voltage");
+                    case BatteryManager.BATTERY_HEALTH_OVER_VOLTAGE:textBatteryHealth.setText("Santé batterie : hors voltage");
                         break;
-                    case BatteryManager.BATTERY_HEALTH_UNKNOWN:textBatteryHealth.setText("Santé de la batterie : inconnue");
+                    case BatteryManager.BATTERY_HEALTH_UNKNOWN:textBatteryHealth.setText("Santé batterie : inconnue");
                         break;
-                    case BatteryManager.BATTERY_HEALTH_UNSPECIFIED_FAILURE:textBatteryHealth.setText("Santé de la batterie : erreur");
+                    case BatteryManager.BATTERY_HEALTH_UNSPECIFIED_FAILURE:textBatteryHealth.setText("Santé batterie : erreur");
                         break;
                     default:
                         break;
