@@ -1,5 +1,6 @@
 package com.example.cgi.listener;
 
+import android.app.Activity;
 import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
@@ -21,11 +22,13 @@ public class LocationListenerImpl implements LocationListener {
 
     private double longitude;
     private double latitude;
+    private Context context;
     private GoogleMap mMap;
     private Geocoder geocoder;
     private List<Address> addresses;
 
     public LocationListenerImpl(Context context, GoogleMap mMap) {
+        this.context = context;
         this.geocoder = new Geocoder(context, Locale.getDefault());
         this.mMap = mMap;
         this.addresses = null;
@@ -66,25 +69,25 @@ public class LocationListenerImpl implements LocationListener {
             LatLng position = new LatLng(this.latitude, this.longitude);
 
             mMap.clear();
-            mMap.addMarker(new MarkerOptions().position(position).title("Vous êtes ici"));
             mMap.moveCamera(CameraUpdateFactory.newLatLng(position));
-            mMap.moveCamera(CameraUpdateFactory.zoomTo(10.0f));
+            mMap.moveCamera(CameraUpdateFactory.zoomTo(17.0f));
+
+            try {
+                this.addresses = this.geocoder.getFromLocation(this.latitude, this.longitude, 1);
+            } catch (IOException e) {
+                Log.e("location", "erreur d'IO");
+            }
+
+            if(this.addresses == null || this.addresses.size() == 0) {
+                Log.e("location", "aucune adresse trouvée");
+                mMap.addMarker(new MarkerOptions().position(position).title("Vous êtes ici"));
+            } else {
+                Address address = this.addresses.get(0);
+                Log.i("addresse", address.toString());
+                mMap.addMarker(new MarkerOptions().position(position).title(address.getAddressLine(0)));
+            }
         }
 
-        try {
-            this.addresses = this.geocoder.getFromLocation(this.latitude, this.longitude, 1);
-        } catch (IOException e) {
-            Log.e("location", "erreur d'IO");
-        }
-
-        if(this.addresses == null || this.addresses.size() == 0) {
-            Log.e("location", "aucune adresse trouvée");
-        } else {
-            Address address = this.addresses.get(0);
-            Log.i("addresse", address.toString());
-
-
-        }
 
 
     }
