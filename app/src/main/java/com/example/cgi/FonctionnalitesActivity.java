@@ -2,7 +2,10 @@ package com.example.cgi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.telephony.SmsManager;
+import android.view.View;
 
 public class FonctionnalitesActivity extends AppCompatActivity {
 
@@ -11,4 +14,11 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fonctionnalites);
     }
+
+    public void SmsActivity (View v){
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.putExtra("sms_body", "default content");
+        i.setType("vnd.android-dir/mms-sms");
+        startActivity(i);
+       }
 }
