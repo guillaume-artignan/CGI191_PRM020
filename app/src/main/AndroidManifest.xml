@@ -6,6 +6,11 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,7 +18,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".FlashLightActivity"></activity>
+=======
+        <activity android:name=".BatteryActivity"></activity>
+>>>>>>> Batterie
         <activity android:name=".FonctionnalitesActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -33,6 +42,7 @@
         <activity android:name=".ListePlatsActivity" />
         <activity android:name=".PhoneCallActivity" />
         <activity android:name=".MenuActivity" />
+        <activity android:name=".SensorActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
