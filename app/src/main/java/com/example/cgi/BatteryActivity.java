@@ -38,9 +38,9 @@ public class BatteryActivity extends AppCompatActivity {
                 boolean isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING || status == BatteryManager.BATTERY_STATUS_FULL;
 
                 if(isCharging)
-                    textBatteryStatus.setText("Battery Status : charging");
+                    textBatteryStatus.setText("Statut  : en charge");
                  else
-                    textBatteryStatus.setText("Battery Status : charged full");
+                    textBatteryStatus.setText("Statut  : chargé");
 
                  int powerSource = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
                  boolean isUSBCharge = powerSource == BatteryManager.BATTERY_PLUGGED_USB || powerSource == BatteryManager.BATTERY_PLUGGED_AC;
@@ -53,42 +53,40 @@ public class BatteryActivity extends AppCompatActivity {
                 int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
                 int scale = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
                 float batteryPct = (level/(float) scale)*100;
-                textBatteryLevel.setText("Battery level : "+batteryPct+" %");
+                textBatteryLevel.setText("Niveau de batterie : "+batteryPct+" %");
 
                 int voltage = intent.getIntExtra(BatteryManager.EXTRA_VOLTAGE, -1);
-                textBatteryVoltage.setText("Battery voltage : "+voltage+" mv");
+                textBatteryVoltage.setText("Voltage : "+voltage+" mv");
 
                 int temperature = intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, -1);
-                textBatteryTemperature.setText("Battery temperature : "+temperature+" °F");
+                Double temperatureCelsius = (temperature-32)/1.8;
+                textBatteryTemperature.setText("Température : "+temperatureCelsius+" °C");
 
                 String technology = intent.getStringExtra(BatteryManager.EXTRA_TECHNOLOGY);
-                textBatteryTechnology.setText("Battery technology : "+technology);
+                textBatteryTechnology.setText("Type de batterie : "+technology);
 
                 int health = intent.getIntExtra(BatteryManager.EXTRA_HEALTH, -1);
                 switch(health) {
-                    case BatteryManager.BATTERY_HEALTH_COLD:textBatteryHealth.setText("Battery health : cold");
+                    case BatteryManager.BATTERY_HEALTH_COLD:textBatteryHealth.setText("Santé de la batterie : froide");
                         break;
-                    case BatteryManager.BATTERY_HEALTH_DEAD:textBatteryHealth.setText("Battery health : dead");
+                    case BatteryManager.BATTERY_HEALTH_DEAD:textBatteryHealth.setText("Santé de la batterie : morte");
                         break;
-                    case BatteryManager.BATTERY_HEALTH_GOOD:textBatteryHealth.setText("Battery health : good");
+                    case BatteryManager.BATTERY_HEALTH_GOOD:textBatteryHealth.setText("Santé de la batterie : bonne");
                         break;
-                    case BatteryManager.BATTERY_HEALTH_OVERHEAT:textBatteryHealth.setText("Battery health : overheat");
+                    case BatteryManager.BATTERY_HEALTH_OVERHEAT:textBatteryHealth.setText("Santé de la batterie : en surchauffe");
                         break;
-                    case BatteryManager.BATTERY_HEALTH_OVER_VOLTAGE:textBatteryHealth.setText("Battery health : over voltage");
+                    case BatteryManager.BATTERY_HEALTH_OVER_VOLTAGE:textBatteryHealth.setText("Santé de la batterie : hors voltage");
                         break;
-                    case BatteryManager.BATTERY_HEALTH_UNKNOWN:textBatteryHealth.setText("Battery health : unknown");
+                    case BatteryManager.BATTERY_HEALTH_UNKNOWN:textBatteryHealth.setText("Santé de la batterie : inconnue");
                         break;
-                    case BatteryManager.BATTERY_HEALTH_UNSPECIFIED_FAILURE:textBatteryHealth.setText("Battery health : failure");
+                    case BatteryManager.BATTERY_HEALTH_UNSPECIFIED_FAILURE:textBatteryHealth.setText("Santé de la batterie : erreur");
                         break;
                     default:
                         break;
-
                 }
-
-
             }
         };
-
+        
         BatteryActivity.this.registerReceiver(br, intentFilter);
     }
 
