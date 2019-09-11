@@ -75,7 +75,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:text="JOUER UN SON" />
+            android:text="JOUER UN SON"
+            android:onClick="ouvrirSon"
+            tools:context=".JouerSonActivity"/>
 
         <Button
             android:id="@+id/button9"

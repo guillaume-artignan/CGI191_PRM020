@@ -14,7 +14,13 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fonctionnalites);
     }
 
-    public void Flashlight(View v){
+
+    public void ouvrirSon(View v){
+        Intent i = new Intent(this,JouerSonActivity.class);
+        startActivity(i);
+    }
+
+  public void Flashlight(View v){
         Intent i = new Intent(this,FlashLightActivity.class);
         startActivity(i);
     }
