@@ -17,11 +17,11 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/Bat1"
+            android:id="@+id/bat1"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="0.5"
-            app:srcCompat="@drawable/Bat1" />
+            app:srcCompat="@drawable/bat1" />
 
         <TextView
             android:id="@+id/battery_status"
@@ -40,11 +40,11 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/Bat2"
+            android:id="@+id/bat2"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="0.5"
-            app:srcCompat="@drawable/Bat2" />
+            app:srcCompat="@drawable/bat2" />
 
         <TextView
             android:id="@+id/power_source"
@@ -62,11 +62,11 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/Bat3"
+            android:id="@+id/bat3"
             android:layout_width="45dp"
             android:layout_height="50dp"
             android:layout_weight="0.5"
-            app:srcCompat="@drawable/Bat3" />
+            app:srcCompat="@drawable/bat3" />
 
         <TextView
             android:id="@+id/battery_level"
@@ -84,11 +84,11 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/Bat4"
+            android:id="@+id/bat4"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="0.5"
-            app:srcCompat="@drawable/Bat4" />
+            app:srcCompat="@drawable/bat4" />
 
         <TextView
             android:id="@+id/battery_health"
@@ -106,11 +106,11 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/Bat5"
+            android:id="@+id/bat5"
             android:layout_width="52dp"
             android:layout_height="50dp"
             android:layout_weight="0.5"
-            app:srcCompat="@drawable/Bat5" />
+            app:srcCompat="@drawable/bat5" />
 
         <TextView
             android:id="@+id/battery_voltage"
@@ -128,11 +128,11 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/Bat6"
+            android:id="@+id/bat6"
             android:layout_width="65dp"
             android:layout_height="50dp"
             android:layout_weight="0.5"
-            app:srcCompat="@drawable/Bat6" />
+            app:srcCompat="@drawable/bat6" />
 
         <TextView
             android:id="@+id/battery_temperature"
@@ -150,11 +150,11 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/Bat7"
+            android:id="@+id/bat7"
             android:layout_width="62dp"
             android:layout_height="50dp"
             android:layout_weight="0.5"
-            app:srcCompat="@drawable/Bat7" />
+            app:srcCompat="@drawable/bat7" />
 
         <TextView
             android:id="@+id/battery_technology"
