@@ -16,9 +16,7 @@ public class FonctionnalitesActivity extends AppCompatActivity {
     }
 
     public void SmsActivity (View v){
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.putExtra("sms_body", "default content");
-        i.setType("vnd.android-dir/mms-sms");
+        Intent i = new Intent(this,SmsActivity.class);
         startActivity(i);
        }
 }

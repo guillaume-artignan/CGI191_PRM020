@@ -42,6 +42,7 @@ public class SmsActivity extends AppCompatActivity {
         });
     }
 
+
     protected void sendSMSMessage() {
         phoneNo = txtphoneNo.getText().toString();
         message = txtMessage.getText().toString();
