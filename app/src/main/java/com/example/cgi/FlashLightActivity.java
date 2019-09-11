@@ -22,6 +22,7 @@ import android.widget.Toast;
 public class FlashLightActivity extends AppCompatActivity {
 
     Button btnFlashLight;
+    Button btnFlashLightSos;
     private final int CAMERA_REQUEST_CODE=2;
     boolean hasCameraFlash = false;
     private boolean isFlashOn=false;
@@ -40,6 +41,45 @@ public class FlashLightActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 askPermission(Manifest.permission.CAMERA,CAMERA_REQUEST_CODE);
+
+            }
+        });
+
+        btnFlashLightSos = findViewById(R.id.btnFlashSos);
+        btnFlashLightSos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String myString = "111000111";
+                for (int i = 0; i < myString.length(); i++){
+                    if(myString.charAt(i) == '1'){
+                        flashLightOn();
+                        try {
+                            Thread.sleep(200);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        flashLightOff();
+                        try {
+                            Thread.sleep(300);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    else{
+                        flashLightOn();
+                        try {
+                            Thread.sleep(600);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        flashLightOff();
+                        try {
+                            Thread.sleep(300);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
 
             }
         });

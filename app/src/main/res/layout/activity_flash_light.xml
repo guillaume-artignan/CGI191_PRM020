@@ -14,5 +14,15 @@
         android:text="ON"
         />
 
+    <Button
+        android:id="@+id/btnFlashSos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnFlash"
+        android:layout_alignStart="@id/btnFlash"
+        android:layout_marginTop="14dp"
+        android:background="@android:color/holo_blue_bright"
+        android:text="SOS" />
+
 
 </RelativeLayout>
