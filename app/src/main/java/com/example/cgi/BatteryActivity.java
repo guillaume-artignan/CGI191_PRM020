@@ -59,7 +59,7 @@ public class BatteryActivity extends AppCompatActivity {
                 textBatteryVoltage.setText("Voltage : "+voltage+" mv");
 
                 int temperature = intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, -1);
-                Double temperatureCelsius = (temperature-32)/1.8;
+                int temperatureCelsius = (temperature-32)/2;
                 textBatteryTemperature.setText("Température : "+temperatureCelsius+" °C");
 
                 String technology = intent.getStringExtra(BatteryManager.EXTRA_TECHNOLOGY);
@@ -86,7 +86,7 @@ public class BatteryActivity extends AppCompatActivity {
                 }
             }
         };
-        
+
         BatteryActivity.this.registerReceiver(br, intentFilter);
     }
 
