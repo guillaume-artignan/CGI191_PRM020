@@ -14,6 +14,7 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fonctionnalites);
     }
 
+<<<<<<< HEAD
     public void positionActivity(View v){
         Intent i = new Intent(this, PositionActivity.class);
         startActivity(i);
@@ -44,4 +45,10 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+=======
+    public void volume(View v){
+        Intent i = new Intent(this,VolumeActivity.class);
+        startActivity(i);
+    }
+>>>>>>> JeremAlex
 }

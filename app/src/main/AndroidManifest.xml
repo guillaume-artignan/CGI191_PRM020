@@ -36,7 +36,11 @@
         <activity android:name=".AfficheAvisActivity" />
         <activity android:name=".PosteAvisActivity" />
         <activity android:name=".ListePlatsActivity" />
+<<<<<<< HEAD
         <activity android:name=".PhoneCallActivity" />
+=======
+        <activity android:name=".VolumeActivity" />
+>>>>>>> JeremAlex
         <activity android:name=".MenuActivity" />
         <activity android:name=".SensorActivity" />
         <activity android:name=".MainActivity">
