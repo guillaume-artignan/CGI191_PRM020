@@ -15,6 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="50"
+            android:onClick="afficheBattery"
             android:text="Batterie" />
 
         <Button
@@ -22,7 +23,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:text="Flash Light" />
+            android:text="Flash Light"
+            android:onClick="Flashlight"/>
     </TableRow>
 
     <TableRow
@@ -54,6 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="50"
+            android:onClick="sensorFonction"
             android:text="SENSOR" />
 
         <Button
@@ -73,7 +76,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:text="JOUER UN SON" />
+            android:text="JOUER UN SON"
+            android:onClick="ouvrirSon"
+            tools:context=".JouerSonActivity"/>
 
         <Button
             android:id="@+id/button9"
@@ -92,6 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="50"
+            android:onClick="fonctionnalitePhoneCall"
             android:text="APPEL" />
 
         <Button
