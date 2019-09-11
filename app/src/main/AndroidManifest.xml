@@ -6,6 +6,14 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
+<<<<<<< HEAD
+=======
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+>>>>>>> feat/sensor-activity
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,6 +41,7 @@
         <activity android:name=".ListePlatsActivity" />
         <activity android:name=".PhoneCallActivity" />
         <activity android:name=".MenuActivity" />
+        <activity android:name=".SensorActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

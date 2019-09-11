@@ -14,6 +14,7 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fonctionnalites);
     }
 
+<<<<<<< .merge_file_a21064
     public void Flashlight(View v){
         Intent i = new Intent(this,FlashLightActivity.class);
         startActivity(i);
@@ -24,4 +25,10 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+=======
+    public void sensorFonction(View v){
+        Intent i = new Intent(this,SensorActivity.class);
+        startActivity(i);
+    }
+>>>>>>> .merge_file_a20604
 }
