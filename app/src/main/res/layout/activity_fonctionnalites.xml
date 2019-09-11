@@ -22,7 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:text="Flash Light" />
+            android:text="Flash Light"
+            android:onClick="Flashlight"/>
     </TableRow>
 
     <TableRow
