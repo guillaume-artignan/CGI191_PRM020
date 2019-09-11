@@ -36,6 +36,7 @@
         <activity android:name=".AfficheAvisActivity" />
         <activity android:name=".PosteAvisActivity" />
         <activity android:name=".ListePlatsActivity" />
+        <activity android:name=".VolumeActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
