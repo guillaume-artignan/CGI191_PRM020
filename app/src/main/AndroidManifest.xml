@@ -18,7 +18,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".FlashLightActivity"></activity>
+=======
+        <activity android:name=".BatteryActivity"></activity>
+>>>>>>> Batterie
         <activity android:name=".FonctionnalitesActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

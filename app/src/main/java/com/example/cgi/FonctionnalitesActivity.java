@@ -14,6 +14,7 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fonctionnalites);
     }
 
+<<<<<<< HEAD
     public void Flashlight(View v){
         Intent i = new Intent(this,FlashLightActivity.class);
         startActivity(i);
@@ -29,4 +30,10 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+=======
+    public void afficheBattery (View v){
+        Intent i = new Intent(this,BatteryActivity.class);
+        startActivity(i);
+    }
+>>>>>>> Batterie
 }
