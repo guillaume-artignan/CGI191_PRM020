@@ -19,4 +19,9 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void fonctionnalitePhoneCall(View v){
+        Intent i = new Intent(this,PhoneCallActivity.class);
+        startActivity(i);
+    }
+
 }
