@@ -49,6 +49,16 @@
             android:layout_below="@+id/password_input"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
+            android:onClick="seConnecter"
             android:text="@string/connect" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button"
+            android:layout_alignStart="@+id/button"
+            android:layout_alignEnd="@+id/button"
+            android:onClick="fonctionnalites"
+            android:text="Fonctionnalités" />
     </RelativeLayout>
 </LinearLayout>

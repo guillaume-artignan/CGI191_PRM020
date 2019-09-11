@@ -27,4 +27,9 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,R.string.message_connect,Toast.LENGTH_LONG).show();
         }
     }
+
+    public void fonctionnalites(View v){
+        Intent i = new Intent(this,FonctionnalitesActivity.class);
+        startActivity(i);
+    }
 }
