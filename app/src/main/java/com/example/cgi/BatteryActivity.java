@@ -52,8 +52,8 @@ public class BatteryActivity extends AppCompatActivity {
 
                 int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
                 int scale = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-                float batteryPct = (level/(float) scale)*100;
-                textBatteryLevel.setText("Niveau batterie : "+batteryPct+" %");
+
+                textBatteryLevel.setText("Niveau batterie : "+level+" %");
 
                 int voltage = intent.getIntExtra(BatteryManager.EXTRA_VOLTAGE, -1);
                 textBatteryVoltage.setText("Voltage : "+voltage+" mv");
