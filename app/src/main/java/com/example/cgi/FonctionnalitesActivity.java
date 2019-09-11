@@ -14,6 +14,10 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fonctionnalites);
     }
 
+    public void positionActivity(View v){
+        Intent i = new Intent(this, PositionActivity.class);
+        startActivity(i);
+    }
 
     public void ouvrirSon(View v){
         Intent i = new Intent(this,JouerSonActivity.class);
