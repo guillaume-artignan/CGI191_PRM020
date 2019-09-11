@@ -35,6 +35,12 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void menuTakePicture(View v)
+    {
+        Intent i = new Intent(this, CameraActivity.class);
+        startActivity(i);
+    }
+
     @Override
     protected void onStart() {
         super.onStart();

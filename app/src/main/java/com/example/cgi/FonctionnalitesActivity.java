@@ -1,3 +1,4 @@
+
 package com.example.cgi;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -55,4 +56,11 @@ public class FonctionnalitesActivity extends AppCompatActivity {
         Intent i = new Intent(this,SmsActivity.class);
         startActivity(i);
        }
+  
+    public void menuTakePicture1(View v)
+    {
+        Intent i = new Intent(this, CameraActivity1.class);
+        startActivity(i);
+    }
 }
+
